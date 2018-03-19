@@ -6,8 +6,8 @@ import click
 
 
 @click.command()
-@click.option('--username', prompt='Your name', help='Number of greetings.')
-@click.option('--password', prompt='Your password', help='The person to greet.')
+@click.option('--username', prompt='Your name', help='User name for logging into account')
+@click.option('--password', prompt='Your password', help='User password for logging into account')
 def get_meals_balance(username, password):
     s = requests.Session()
     r = s.get('https://www.sodexo-ucet.cz/')
